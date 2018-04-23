@@ -136,4 +136,29 @@ public class OrderDTO implements Serializable {
 		this.totalValue = totalValue;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Nombre del solicitante: ").append(name).append(System.lineSeparator())
+		.append("Tipo de identificación: ").append(docType).append(System.lineSeparator())
+		.append("Número de identificación: ").append(docNumber).append(System.lineSeparator())
+		.append("Fecha de entrega: ").append(date).append(System.lineSeparator())
+		.append("Dirección de entrega: ").append(address).append(System.lineSeparator())
+		.append("Cantidad total: ").append(quantity).append(System.lineSeparator())
+		.append("Valor total: ").append(totalValue).append(System.lineSeparator())
+		.append("Detalle compra: ").append(System.lineSeparator());
+		
+		Integer index = 1;
+		for(ProductDTO product : detail) {
+			sb.append("Producto #").append(index++).append(System.lineSeparator()).append(product);			
+		}
+		
+		return sb.toString();
+	}
+	
+	
+
 }

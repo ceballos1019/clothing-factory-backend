@@ -61,5 +61,20 @@ public class ProductDTO implements Serializable {
 	 */
 	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Tipo de ropa: ").append(type).append(System.lineSeparator())
+		.append("Precio unitario: ").append(price).append(System.lineSeparator())
+		.append("Unidades: ").append(quantity).append(System.lineSeparator());
+		
+		return sb.toString();
 	}	
+	
+	
 }

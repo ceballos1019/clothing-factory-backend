@@ -3,53 +3,63 @@
  */
 package com.ibm.clothingfactory.exception;
 
+import org.apache.log4j.Logger;
+
 /**
  * @author andressanchez
  *
  */
 public class ClothingFactoryException extends Exception {
 
+	/** seriaVersionUID **/
+	private static final long serialVersionUID = 2501135526777254727L;
+	
+	private final Logger logger = Logger.getLogger(this.getClass());
+
 	/**
 	 * 
 	 */
 	public ClothingFactoryException() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	/**
-	 * @param arg0
+	 * @param message
+	 * @param cause
+	 * @param enableSuppression
+	 * @param writableStackTrace
 	 */
-	public ClothingFactoryException(String arg0) {
-		super(arg0);
-		// TODO Auto-generated constructor stub
+	public ClothingFactoryException(String message, Throwable cause,
+			boolean enableSuppression, boolean writableStackTrace) {
+		super(message, cause, enableSuppression, writableStackTrace);
+		
 	}
 
 	/**
-	 * @param arg0
+	 * @param message
+	 * @param cause
 	 */
-	public ClothingFactoryException(Throwable arg0) {
-		super(arg0);
-		// TODO Auto-generated constructor stub
+	public ClothingFactoryException(String message, Throwable cause) {
+		super(message, cause);
+		logger.error(message, cause);
 	}
 
 	/**
-	 * @param arg0
-	 * @param arg1
+	 * @param message
 	 */
-	public ClothingFactoryException(String arg0, Throwable arg1) {
-		super(arg0, arg1);
-		// TODO Auto-generated constructor stub
+	public ClothingFactoryException(String message) {
+		super(message);
+		logger.error(message);
 	}
 
 	/**
-	 * @param arg0
-	 * @param arg1
-	 * @param arg2
-	 * @param arg3
+	 * @param cause
 	 */
-	public ClothingFactoryException(String arg0, Throwable arg1, boolean arg2, boolean arg3) {
-		super(arg0, arg1, arg2, arg3);
-		// TODO Auto-generated constructor stub
+	public ClothingFactoryException(Throwable cause) {
+		super(cause);
+		logger.error(cause);
 	}
+
+	
 
 }

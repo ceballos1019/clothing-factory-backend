@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.ibm.clothingfactory.dao;
 
 import com.ibm.clothingfactory.dto.OrderDTO;
