@@ -27,7 +27,7 @@ import com.ibm.clothingfactory.exception.ClothingFactoryException;
  * @version 1.0
  */
 @Stateless
-@Local(IOrderDAO.class)
+@Local(IProductDAO.class)
 @TransactionManagement(TransactionManagementType.BEAN)
 public class ProductDAOImpl implements IProductDAO {
 
