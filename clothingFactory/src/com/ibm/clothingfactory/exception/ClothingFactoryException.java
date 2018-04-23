@@ -6,8 +6,11 @@ package com.ibm.clothingfactory.exception;
 import org.apache.log4j.Logger;
 
 /**
- * @author andressanchez
- *
+ * Clase para manejar excepciones propias 
+ * IBM Global Business Services GBS Colombia * 
+ * @author Andres Ceballos Sanchez - andres.ceballos@ibm.com
+ * @since 22/04/2018
+ * @version 1.0
  */
 public class ClothingFactoryException extends Exception {
 

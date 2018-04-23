@@ -14,8 +14,9 @@ import com.ibm.clothingfactory.dto.ProductDTO;
 import com.ibm.clothingfactory.exception.ClothingFactoryException;
 
 /**
- * @author andressanchez
- *
+ * Clase para probar los metodos creados en el OrderDAO
+ * @author Andres Ceballos Sanchez - andres.ceballos@ibm.com
+ * @version 1.0
  */
 public class ProductDAOTest {
 	
