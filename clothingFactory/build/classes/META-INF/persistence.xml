@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="PU_CLOTHINGFACTORY" transaction-type="JTA">
+		<jta-data-source>jdbc/clothingFactory</jta-data-source>
+		<class>com.ibm.clothingfactory.entity.Order</class>
+		<class>com.ibm.clothingfactory.entity.Product</class>
+		<class>com.ibm.clothingfactory.entity.ProductByOrder</class>
+		<properties>
+			<property name="openjpa.jdbc.Schema" value="CLOTHINGFACTORY" />
+			<property name="openjpa.jdbc.DBDictionary" value="db2" />
+			<property name="openjpa.Log"
+				value="DefaultLevel=WARN, Runtime=INFO, Tool=INFO, SQL=TRACE" />
+			<property name="openjpa.RuntimeUnenhancedClasses" value="supported" />
+			<property name="openjpa.ConnectionFactoryProperties" value="PrettyPrint=true, PrettyPrintLineLength=72" />
+		</properties>
+	</persistence-unit>
+</persistence>
