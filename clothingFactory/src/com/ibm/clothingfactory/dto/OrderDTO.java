@@ -7,8 +7,11 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * @author andressanchez
- *
+ * DTO que mapea un pedido
+ * IBM Global Business Services GBS Colombia
+ * @author Andres Ceballos Sanchez - andres.ceballos@ibm.com
+ * @since 22/04/2018
+ * @version 1.0
  */
 public class OrderDTO implements Serializable {
 
@@ -143,10 +146,10 @@ public class OrderDTO implements Serializable {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Nombre del solicitante: ").append(name).append(System.lineSeparator())
-		.append("Tipo de identificación: ").append(docType).append(System.lineSeparator())
-		.append("Número de identificación: ").append(docNumber).append(System.lineSeparator())
+		.append("Tipo de identificaciï¿½n: ").append(docType).append(System.lineSeparator())
+		.append("Nï¿½mero de identificaciï¿½n: ").append(docNumber).append(System.lineSeparator())
 		.append("Fecha de entrega: ").append(date).append(System.lineSeparator())
-		.append("Dirección de entrega: ").append(address).append(System.lineSeparator())
+		.append("Direcciï¿½n de entrega: ").append(address).append(System.lineSeparator())
 		.append("Cantidad total: ").append(quantity).append(System.lineSeparator())
 		.append("Valor total: ").append(totalValue).append(System.lineSeparator())
 		.append("Detalle compra: ").append(System.lineSeparator());

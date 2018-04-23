@@ -10,10 +10,10 @@ import com.ibm.clothingfactory.providers.OutputStreamProvider;
 import com.ibm.clothingfactory.rest.ClothingFactoryResource;
 
 /**
- * Clase principal de la aplicacion - Encargada de mapear los controladores
+ * Clase principal de la aplicacion - Encargada de mapear los servicios web
  * IBM Global Business Services GBS Colombia
- * @author andressanchez - Andres Ceballos Sanchez - IBM
- * @since 19/04/2018
+ * @author Andres Ceballos Sanchez - andres.ceballos@ibm.com
+ * @since 22/04/2018
  * @version 1.0
  */
 public class ClothingFactoryApplication extends Application {
