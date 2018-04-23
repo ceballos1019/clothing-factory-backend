@@ -32,20 +32,23 @@ public class ClothingFactoryResource implements Serializable {
 	private static final long serialVersionUID = 1903804341139347970L;
 	
 	private static final String ENCODING = "UTF-8";
+	private static final String OK_MESSAGE = "Pedido registrado exitosamente";
 	
 	@EJB
 	private IOrderDAO orderDAO;
 	
 	@POST
 	@Path("order")
-	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces(MediaType.APPLICATION_JSON + "charset="  + ENCODING)
+	@Consumes(MediaType.APPLICATION_JSON)	
+	@Produces(MediaType.APPLICATION_JSON + ";charset=" + ENCODING)
 	public Response addOrder(OrderDTO orderDTO) {
 		try {
 			/*Registrar el pedido en base de datos*/
-			System.out.println(orderDTO);
+			System.out.println("Mostrando el pedido: \n" + orderDTO.toString());			
+			
+			/*TODO Almacenar el pedido en base de datos*/
 			//orderDAO.addOrder(orderDTO);
-			return Response.status(Response.Status.OK).entity("Registro exitoso").build();
+			return Response.status(Response.Status.OK).entity(OK_MESSAGE).build();
 		} catch(Exception e) {
 			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(e.getMessage()).build();
 		}
