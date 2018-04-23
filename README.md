@@ -3,14 +3,18 @@
 ## Requirements
 
 JDK 1.7+
+
 Eclipse IDE
 
 ## API Rest
 
 To request order:
 
-Path: http://<host>/clothingFactory/v1/rest/services/order
+Path: http://[host]/clothingFactory/v1/rest/services/order
+  
 Json Example:
+
+```
 {
   "name": "MyName",
   "docType": "Cedula de ciudadania",
@@ -38,3 +42,4 @@ Json Example:
   ],
   "totalValue": 213000.2
 }
+```
